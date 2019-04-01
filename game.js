@@ -21,6 +21,7 @@ var JEWEL_D = loadImage("gemD.png");
 var JEWEL_E = loadImage("gemE.png");
 var JEWEL_F = loadImage("gemF.png");
 const SCARY = loadImage("scary.jpg");
+const EVIL_LAUGH = loadSound("evil_laugh.mp3");
 var JEWELS = [JEWEL_A,
     JEWEL_B,
     JEWEL_C,
@@ -369,6 +370,7 @@ function onTick() {
     }
     if (score > 1000) {
         drawImage(SCARY, 0, 0, canvas.width, canvas.height);
+        playSound(EVIL_LAUGH);
     }
 }
 
