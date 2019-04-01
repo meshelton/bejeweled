@@ -28,6 +28,8 @@ var JEWELS = [JEWEL_A,
     JEWEL_D,
     JEWEL_E,
     JEWEL_F];
+const urlParams = new URLSearchParams(window.location.search);
+const name = urlParams.get("name") || "You!";
 
 
 ///////////////////////////////////////////////////////////////
@@ -715,7 +717,7 @@ function drawPlayerScore() {
         "center",
         "top");
 
-    fillText("For Vicky",
+    fillText("For " + name,
         xpos,
         800,
         makeColor(0.8, 0.0, 0.0, 1.0),
